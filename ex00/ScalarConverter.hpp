@@ -6,7 +6,7 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 09:24:43 by mhummel           #+#    #+#             */
-/*   Updated: 2025/06/25 10:34:32 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/07/14 08:33:39 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class ScalarConverter {
 public:
-	static void convert(const std::string& input);
+	static void convert(const std::string& literal);
 
 private:
 	ScalarConverter(); // Private constructor
+	ScalarConverter(const ScalarConverter&); // Private copy constructor
+	ScalarConverter& operator=(const ScalarConverter&); // Private assignment operator
 	~ScalarConverter(); // Private destructor
-	ScalarConverter(const ScalarConverter& other); // Private copy constructor
-	ScalarConverter& operator=(const ScalarConverter& other); // Private assignment operator
 };
 
-#endif // SCALARCONVERTER_HPP
+#endif
